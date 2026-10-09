@@ -1,0 +1,129 @@
+/* Week 1: UTF-8 best practice at top of CSS file */
+@charset "UTF-8";
+
+/* Color scheme hexadecimal values: 1B3A5C 2A9D8F E76F51 E9C46A F7F3E9 */
+/* (from color.adobe.com/create) */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  background-color: #F7F3E9; /* cream */
+  color: #1B3A5C; /* navy text */
+}
+
+/* Week 1: #wrapper is the outer container - fluid width using % not px */
+#wrapper {
+  width: 90%;       /* Week 3: fluid design - percentage, not fixed pixels */
+  max-width: 1100px; /* keeps it from stretching too wide on huge screens */
+  margin: 0 auto;    /* centers the wrapper */
+}
+
+/* HEADER with a linear gradient background (Week 1 gradient requirement) */
+header {
+  background: #1B3A5C; /* fallback for unsupported browsers (graceful degradation) */
+  background: linear-gradient(to right, #1B3A5C, #2A9D8F);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* NAV styling */
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #E9C46A; /* gold links */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #E76F51; /* coral on hover */
+}
+
+/* ARTICLE - main content area */
+article {
+  padding: 30px 20px;
+}
+
+article h2 {
+  color: #2A9D8F;
+  border-bottom: 2px solid #E9C46A;
+  padding-bottom: 5px;
+}
+
+/* SECTION styling (used in projects.html) */
+section {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: white;
+  border-left: 4px solid #2A9D8F;
+}
+
+/* Angled linear gradient - Week 1 requirement (gradient at an angle) */
+section:hover {
+  background: linear-gradient(45deg, #F7F3E9, #E9C46A33);
+  /* the "33" on the end of the hex adds transparency */
+}
+
+/* FOOTER */
+footer {
+  background-color: #1B3A5C;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+footer address {
+  font-style: italic;
+}
+footer a {
+  color: #E9C46A;
+}
+
+/* IMAGE sizing - fluid so it scales with its container */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* VIDEO container styling (Week 2) */
+video {
+  max-width: 100%;
+  border: 3px solid #2A9D8F;
+  border-radius: 6px;
+}
+
+/* FORM styling (contact.html) */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+input, textarea {
+  width: 90%;
+  max-width: 400px;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #2A9D8F;
+  border-radius: 4px;
+}
+input[type="submit"], input[type="reset"] {
+  width: auto;
+  background-color: #E76F51; /* angled-gradient button */
+  background: linear-gradient(135deg, #E76F51, #E9C46A);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+  opacity: 0.85;
+}

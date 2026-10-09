@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  background-color: #F7F3E9;
+  color: #1B3A5C;
+  font-size: 18px; /* Week 3: larger type for mobile readability */
+}
+
+#wrapper {
+  width: 100%; /* full fluid width on phones */
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+header {
+  background: #1B3A5C; /* simpler flat color - higher contrast for sunlight (Week 3) */
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Week 3: nav links as large tappable blocks - no hover on mobile */
+nav a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  background-color: #2A9D8F;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+article { padding: 15px 5px; }
+
+section {
+  padding: 10px;
+  background-color: white;
+  border-left: 4px solid #2A9D8F;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #1B3A5C;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+img, video { width: 100%; height: auto; }
+
+form { padding: 10px; }
+input, textarea { width: 100%; box-sizing: border-box; }
+input[type="submit"], input[type="reset"] {
+  width: 100%;
+  margin-top: 8px;
+}
